@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 # url : https://developer.mapquest.com/
 # Consumer Key : ...
 
-APIKEY = "95itl3fo8HBs43ihhhcdcK4oEv8Jkqqx"
+APIKEY = ""
 
 #################### Fonctions et procédures ####################
 
