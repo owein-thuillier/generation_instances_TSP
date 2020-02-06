@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 # url : https://developer.mapquest.com/
 # Consumer Key : ...
 
-APIKEY = ""
+APIKEY = "95itl3fo8HBs43ihhhcdcK4oEv8Jkqqx"
 
 #################### Fonctions et procédures ####################
 
@@ -355,6 +355,7 @@ def main():
     generationInstance(nomDossier, data, noms, latitudes, longitudes, nbLocations, aSupprimer, identifiant)
     
     # Déplacement de l'instance générée dans le dossier contenant toutes les instances générées jusqu'à lors
+    os.system("mkdir Instances")
     os.system("mv instance_* Instances/")
 
     # On supprime le dossier temporaire
@@ -411,6 +412,7 @@ def bulk(nbInstance):
         generationInstance(nomDossier, data, noms, latitudes, longitudes, nbLocations, aSupprimer, identifiant)
     
         # Déplacement de l'instance générée dans le dossier contenant toutes les instances générées jusqu'à lors
+        os.system("mkdir Instances")
         os.system("mv instance_* Instances/")
 
         # On supprime le dossier temporaire
