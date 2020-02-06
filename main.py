@@ -318,6 +318,7 @@ def main():
     # Tirage aléatoire de n locations à partir du dataset selectionné
     n = int(input("\n    --> Nombre de locations : "))
     print("\n\n")
+    os.system("mkdir Temp")
     tirageAleatoire(dataset, n)
 
     # Lecture des coordonnées dans le fichier temporaire contenant les n locations tirées aléatoirement à partir du dataset
@@ -356,8 +357,12 @@ def main():
     # Déplacement de l'instance générée dans le dossier contenant toutes les instances générées jusqu'à lors
     os.system("mv instance_* Instances/")
 
+    # On supprime le dossier temporaire
+    os.system("rm -r Temp")
+
     # Fin du programme
     asciiArtFin()
+
 
 #################### Programme principal - n instances à la fois ####################
 
@@ -375,6 +380,7 @@ def bulk(nbInstance):
         else:
             n = random.randint(3, 25)  # On ne peut pas faire plus de 25 locations
 
+        os.system("mkdir Temp")
         tirageAleatoire(dataset, n)
 
         # Lecture des coordonnées dans le fichier temporaire contenant les n locations tirées aléatoirement à partir du dataset
@@ -406,6 +412,9 @@ def bulk(nbInstance):
     
         # Déplacement de l'instance générée dans le dossier contenant toutes les instances générées jusqu'à lors
         os.system("mv instance_* Instances/")
+
+        # On supprime le dossier temporaire
+        os.system("rm -r Temp")
 
 
 
